@@ -1,0 +1,711 @@
+/* =========================================
+   PALETA EN BLANCO Y AZUL CON CONTRASTE
+   ========================================= */
+:root {
+  --blanco: #ffffff;
+  --hielo: #f4f8fc;
+  --borde-azul: #cfe0f5;
+  --celeste-logo: #00a8e8;   /* Turquesa/celeste del logo USJ */
+  --azul-medio: #0057b8;     /* Azul clínico vibrante */
+  --azul-marino: #071d36;    /* Azul profundo con personalidad */
+  --gris-texto: #475569;
+  --sombra-firme: 8px 8px 0px #0057b8;
+  --sombra-suave: 0 12px 30px rgba(7, 29, 54, 0.07);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background-color: var(--blanco);
+  color: var(--azul-marino);
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* =========================================
+   FRANJA SUPERIOR DE UBICACIÓN RÁPIDA
+   ========================================= */
+.topbar-ubicacion {
+  background-color: var(--azul-marino);
+  color: var(--blanco);
+  font-size: 0.84rem;
+  padding: 9px 0;
+  border-bottom: 3px solid var(--celeste-logo);
+}
+
+.topbar-inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  text-align: center;
+}
+
+.topbar-inner strong {
+  color: var(--celeste-logo);
+}
+
+.topbar-sep {
+  opacity: 0.4;
+}
+
+/* =========================================
+   ENCABEZADO Y NAVEGACIÓN
+   ========================================= */
+.header-principal {
+  background-color: var(--blanco);
+  border-bottom: 2px solid var(--azul-marino);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding: 14px 0;
+}
+
+.nav-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.marca {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.marca-logo {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.marca-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.marca-titulo {
+  font-size: 1.25rem;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+  color: var(--azul-marino);
+}
+
+.marca-sub {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--azul-medio);
+  letter-spacing: 0.8px;
+}
+
+.menu-nav {
+  display: flex;
+  gap: 8px;
+}
+
+.menu-nav a {
+  font-weight: 700;
+  font-size: 0.92rem;
+  color: var(--azul-marino);
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.menu-nav a:hover {
+  background-color: var(--azul-medio);
+  color: var(--blanco);
+}
+
+.btn-acento {
+  background-color: var(--celeste-logo);
+  color: var(--azul-marino);
+  font-weight: 800;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 0.92rem;
+  transition: all 0.2s ease;
+}
+
+.btn-acento:hover {
+  background-color: var(--azul-marino);
+  color: var(--blanco);
+}
+
+/* =========================================
+   PORTADA + TARJETA PROTAGONISTA DE UBICACIÓN
+   ========================================= */
+.portada {
+  padding: 68px 0 80px;
+  background-color: var(--blanco);
+  background-image: radial-gradient(var(--borde-azul) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.portada-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  align-items: center;
+  gap: 48px;
+}
+
+.etiqueta-superior {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: var(--azul-medio);
+  background-color: var(--hielo);
+  border: 1.5px solid var(--azul-medio);
+  padding: 5px 12px;
+  border-radius: 4px;
+  margin-bottom: 18px;
+}
+
+.portada-contenido h1 {
+  font-size: 2.9rem;
+  line-height: 1.12;
+  font-weight: 900;
+  color: var(--azul-marino);
+  margin-bottom: 20px;
+}
+
+.portada-contenido h1 span {
+  color: var(--azul-medio);
+  text-decoration: underline;
+  text-decoration-color: var(--celeste-logo);
+  text-decoration-thickness: 4px;
+  text-underline-offset: 6px;
+}
+
+.portada-texto {
+  font-size: 1.12rem;
+  color: var(--gris-texto);
+  max-width: 540px;
+  margin-bottom: 30px;
+}
+
+.portada-botones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.btn-primario,
+.btn-secundario {
+  display: inline-block;
+  padding: 13px 26px;
+  font-weight: 700;
+  font-size: 0.96rem;
+  border-radius: 6px;
+  transition: all 0.22s ease;
+}
+
+.btn-primario {
+  background-color: var(--azul-marino);
+  color: var(--blanco);
+  border: 2px solid var(--azul-marino);
+}
+
+.btn-primario:hover {
+  background-color: var(--azul-medio);
+  border-color: var(--azul-medio);
+  transform: translateY(-2px);
+}
+
+.btn-secundario {
+  background-color: var(--blanco);
+  color: var(--azul-marino);
+  border: 2px solid var(--azul-marino);
+}
+
+.btn-secundario:hover {
+  background-color: var(--hielo);
+}
+
+/* TARJETA DE UBICACIÓN CON PERSONALIDAD PROPIA */
+.tarjeta-ubicacion {
+  background-color: var(--azul-marino);
+  color: var(--blanco);
+  border-radius: 14px;
+  padding: 32px;
+  border: 2px solid var(--azul-marino);
+  box-shadow: var(--sombra-firme);
+}
+
+.ubicacion-encabezado {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+  padding-bottom: 16px;
+  margin-bottom: 20px;
+}
+
+.ubicacion-tag {
+  display: inline-block;
+  background-color: var(--celeste-logo);
+  color: var(--azul-marino);
+  font-size: 0.74rem;
+  font-weight: 900;
+  padding: 4px 10px;
+  border-radius: 4px;
+  letter-spacing: 0.8px;
+  margin-bottom: 8px;
+}
+
+.ubicacion-encabezado h2 {
+  font-size: 1.65rem;
+  font-weight: 800;
+}
+
+.dato-fila {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.dato-fila.sin-borde {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.dato-label {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--celeste-logo);
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.dato-fila strong {
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.dato-fila small {
+  color: #cbd5e1;
+  font-size: 0.92rem;
+}
+
+/* =========================================
+   VITRINA DE PRODUCTOS REALES (SIN PRECIOS)
+   ========================================= */
+.seccion-vitrina {
+  padding: 80px 0;
+  background-color: var(--hielo);
+  border-top: 2px solid var(--azul-marino);
+  border-bottom: 2px solid var(--azul-marino);
+}
+
+.encabezado-seccion {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 24px;
+  margin-bottom: 48px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid var(--borde-azul);
+}
+
+.etiqueta-seccion {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: var(--azul-medio);
+  letter-spacing: 1px;
+  margin-bottom: 6px;
+}
+
+.encabezado-seccion h2 {
+  font-size: 2.1rem;
+  font-weight: 900;
+  color: var(--azul-marino);
+}
+
+.encabezado-seccion p {
+  color: var(--gris-texto);
+  max-width: 380px;
+  font-weight: 500;
+}
+
+.grupo-productos {
+  margin-bottom: 52px;
+}
+
+.grupo-productos:last-child {
+  margin-bottom: 0;
+}
+
+.titulo-grupo {
+  font-size: 1.28rem;
+  font-weight: 800;
+  color: var(--azul-marino);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.titulo-grupo::before {
+  content: "";
+  width: 14px;
+  height: 14px;
+  background-color: var(--celeste-logo);
+  border: 2px solid var(--azul-marino);
+  border-radius: 3px;
+}
+
+.grilla-productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));
+  gap: 24px;
+}
+
+.tarjeta-prod {
+  background-color: var(--blanco);
+  border: 2px solid var(--azul-marino);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+
+.tarjeta-prod:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 6px 6px 0px var(--celeste-logo);
+}
+
+.prod-foto {
+  height: 195px;
+  background-color: var(--blanco);
+  border-bottom: 2px solid var(--azul-marino);
+  padding: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.prod-foto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.prod-cuerpo {
+  padding: 18px;
+}
+
+.prod-tipo {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  background-color: var(--azul-marino);
+  color: var(--blanco);
+  padding: 3px 9px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+.prod-cuerpo h4 {
+  font-size: 1.12rem;
+  font-weight: 800;
+  margin-bottom: 6px;
+  color: var(--azul-marino);
+}
+
+.prod-cuerpo p {
+  font-size: 0.9rem;
+  color: var(--gris-texto);
+}
+
+/* =========================================
+   BOT DE CONSULTA RÁPIDA (SOLO HTML Y CSS)
+   ========================================= */
+.seccion-bot {
+  padding: 80px 0;
+  background-color: var(--blanco);
+}
+
+.bot-marco {
+  max-width: 880px;
+  margin: 0 auto;
+  background-color: var(--blanco);
+  border: 2px solid var(--azul-marino);
+  border-radius: 14px;
+  padding: 40px;
+  box-shadow: var(--sombra-firme);
+}
+
+.bot-encabezado {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.bot-etiqueta {
+  display: inline-block;
+  background-color: var(--hielo);
+  color: var(--azul-medio);
+  border: 1.5px solid var(--azul-medio);
+  font-size: 0.76rem;
+  font-weight: 800;
+  padding: 4px 12px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.bot-encabezado h2 {
+  font-size: 1.9rem;
+  font-weight: 900;
+  margin-bottom: 6px;
+}
+
+.bot-encabezado p {
+  color: var(--gris-texto);
+}
+
+.bot-input {
+  display: none;
+}
+
+.bot-controles {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.bot-opcion {
+  display: block;
+  text-align: center;
+  padding: 15px 18px;
+  background-color: var(--hielo);
+  color: var(--azul-marino);
+  border: 2px solid var(--azul-marino);
+  border-radius: 8px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.bot-opcion:hover {
+  background-color: #dfeefc;
+}
+
+#bot-op1:checked ~ .bot-controles label[for="bot-op1"],
+#bot-op2:checked ~ .bot-controles label[for="bot-op2"],
+#bot-op3:checked ~ .bot-controles label[for="bot-op3"],
+#bot-op4:checked ~ .bot-controles label[for="bot-op4"] {
+  background-color: var(--azul-marino);
+  color: var(--blanco);
+  box-shadow: 4px 4px 0px var(--celeste-logo);
+}
+
+.bot-panel {
+  display: none;
+  background-color: var(--hielo);
+  border: 2px solid var(--azul-medio);
+  border-left: 8px solid var(--azul-medio);
+  padding: 22px 26px;
+  border-radius: 8px;
+  animation: entradaSuave 0.25s ease;
+}
+
+.bot-panel h3 {
+  font-size: 1.18rem;
+  font-weight: 800;
+  color: var(--azul-marino);
+  margin-bottom: 8px;
+}
+
+.bot-panel p {
+  color: var(--gris-texto);
+  font-size: 0.98rem;
+}
+
+.panel-alerta {
+  background-color: #e6f6fd;
+  border-color: var(--azul-marino);
+  border-left-color: var(--celeste-logo);
+}
+
+#bot-op1:checked ~ .bot-paneles .panel-1,
+#bot-op2:checked ~ .bot-paneles .panel-2,
+#bot-op3:checked ~ .bot-paneles .panel-3,
+#bot-op4:checked ~ .bot-paneles .panel-4 {
+  display: block;
+}
+
+@keyframes entradaSuave {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================================
+   PILARES DE CONFIANZA
+   ========================================= */
+.seccion-pilares {
+  padding: 64px 0;
+  background-color: var(--hielo);
+  border-top: 2px solid var(--azul-marino);
+}
+
+.pilares-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.pilar-item {
+  background-color: var(--blanco);
+  border: 2px solid var(--azul-marino);
+  border-radius: 10px;
+  padding: 28px 24px;
+}
+
+.pilar-numero {
+  display: inline-block;
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--azul-medio);
+  background-color: var(--hielo);
+  padding: 4px 12px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+
+.pilar-item h3 {
+  font-size: 1.15rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.pilar-item p {
+  color: var(--gris-texto);
+  font-size: 0.94rem;
+}
+
+/* =========================================
+   PIE DE PÁGINA
+   ========================================= */
+.pie-pagina {
+  background-color: var(--azul-marino);
+  color: var(--blanco);
+  padding-top: 56px;
+  border-top: 4px solid var(--celeste-logo);
+}
+
+.pie-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 1fr 0.9fr;
+  gap: 32px;
+  padding-bottom: 44px;
+}
+
+.pie-pagina h3 {
+  font-size: 1.3rem;
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+
+.pie-lema {
+  color: #cbd5e1;
+  font-size: 0.94rem;
+}
+
+.pie-pagina h4 {
+  color: var(--celeste-logo);
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  margin-bottom: 12px;
+}
+
+.pie-pagina p {
+  font-size: 0.94rem;
+  color: #e2e8f0;
+  margin-bottom: 4px;
+}
+
+.pie-base {
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+  text-align: center;
+  padding: 18px 0;
+  font-size: 0.86rem;
+  color: #94a3b8;
+}
+
+/* =========================================
+   RESPONSIVE (CELULARES Y TABLETS)
+   ========================================= */
+@media (max-width: 920px) {
+  .menu-nav {
+    display: none;
+  }
+
+  .portada-grid,
+  .pilares-grid,
+  .pie-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .encabezado-seccion {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .portada-contenido h1 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .bot-marco {
+    padding: 24px 18px;
+  }
+
+  .bot-controles {
+    grid-template-columns: 1fr;
+  }
+
+  .topbar-sep {
+    display: none;
+  }
+}
